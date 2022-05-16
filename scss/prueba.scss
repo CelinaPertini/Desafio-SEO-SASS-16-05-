@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+header{
+    height: 250px;
+    background-color: #f3c188;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloPrincipal{
+    
+    color: #991d12;
+    font-size: 50px;
+    text-align: center;
+    display: none;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+
+    animation-name: movimiento-1;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-duration: 3s;
+}
+
+@keyframes movimiento-1 {
+    25% {
+        transform: rotate(360deg) scale(1.4,1.4);
+    }
+    
+}
+
+#hero{
+    height: 90vh;
+    background-image: url('assets/hero3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#hero{
+    .banner{
+        color: #f0fff0;
+        font-size: 70px;
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+main{
+    
+    font-size: 25px;
+}
+section{
+    margin-left: 10px;
+}
+p{
+    margin-left: 10px;
+}
+.titulos {
+    color: #0c0c0b;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+.subtitulos{
+    color: #a55454;
+    margin-left: 20px;
+}
+
+.nav{
+    background-color: #000000;
+}
+
+.nav{
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 50px;
+    }
+    
+}
+.nav{
+    ul{
+        li{
+            display: inline-block;
+            margin: 10px;
+        }
+    }
+    
+}
+
+.nav{
+    a{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 25px;
+    }
+    
+}
+
+.nav{
+    a{
+        &:hover{
+            color: #b9b0b0;
+            font-size: 28px;
+        }
+       
+    }
+    
+}
+
+table, th, td{
+    border: 1px solid #070707;
+    border-collapse: collapse;
+    width: 50%;
+}
+#footer{
+    text-align: right;
+    background-color: #c8c1c1;
+}
+#footer{
+    ul{
+        list-style-type: none;
+    }
+    
+}
+#footer{
+    a{
+        text-decoration: none;
+        color: #000000;
+    }
+    
+}
+#footer{
+    section{
+        margin-right: 20px;
+        padding: 50px;
+    }
+    
+
+}
+#footer{
+    div{
+        margin-bottom: 20px;
+    }
+    
+}
+.icono{
+    position: fixed;
+	width: 60px;
+	height: 60px;
+    bottom: 110px;
+    right: 10px;
+    background-image: url('assets/logoWA.png');
+    background-size: contain;
+}
+
+fieldset{
+    background-color: #ffc0cb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    padding: 20px;
+}
+input{
+    margin: 20px;
+}
+
+.button{
+    background-color: #d86dd2;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 12px;
+    transition-duration: 0.5s;
+    
+}
+
+.button{
+    &:hover {
+        background-color: #ad059f;
+        color: #ffffff;
+    }
+    
+}
+
+
+/* Seccion Grid Inicio */
+.contenedor{
+    
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "hero"
+    "prod"
+    "footer"
+    ;
+}
+.contenedor{
+    header{
+        grid-area: header;
+    }
+    
+}
+.contenedor{
+    nav{
+        grid-area: nav;
+    }
+    
+}
+.contenedor{
+    #hero{
+        grid-area: hero;
+    }
+    
+}
+.contenedor{
+    main{
+        grid-area: prod;
+    }
+    
+}
+
+.contenedor{
+    footer{
+        grid-area: footer;
+    }
+    
+}
+
+.contenedor{
+    header, nav, #hero, main, footer{
+        border: 4px solid #000000;
+    }
+    
+}
+ 
+.prodDestacados{
+    display: grid;
+    background-color: #ffffff;
+    grid-template-areas:
+    "uno"
+    "dos"
+    "tres"
+    ;
+    grid-gap: 40px;
+}
+
+.uno{
+grid-area: uno;
+}
+.dos{
+grid-area: dos;
+}
+.tres{
+grid-area: tres;
+}
+
+.uno, .dos, .tres{
+    border: 3px #a52a2a solid;
+    text-align: center;
+    height: 400px;
+    background-color: #5c5cf5;
+ 
+}
+
+/* comienza uso de media queries */
+@media screen and (min-width: 768px){
+    header{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .tituloPrincipal{
+        display: inline-block;
+    }
+    .prodDestacados{
+        grid-template-areas:
+        "uno dos tres"
+        ;
+        grid-gap: 40px;
+    
+    }
+
+}
