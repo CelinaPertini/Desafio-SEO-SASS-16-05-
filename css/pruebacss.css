@@ -137,18 +137,6 @@ label {
 input {
   margin: 20px; }
 
-.button {
-  background-color: #d86dd2;
-  border: none;
-  width: 100px;
-  height: 50px;
-  border-radius: 12px;
-  transition-duration: 0.5s; }
-
-.button:hover {
-  background-color: #ad059f;
-  color: #ffffff; }
-
 /* Seccion Grid Inicio */
 .contenedor {
   display: grid;
@@ -204,3 +192,43 @@ input {
   .prodDestacados {
     grid-template-areas: "uno dos tres";
     grid-gap: 40px; } }
+
+.producto-uno {
+  color: blue;
+  height: 20px;
+  width: 20px; }
+
+.producto-dos {
+  color: red;
+  height: 20px;
+  width: 20px; }
+
+.producto-tres {
+  color: green;
+  height: 20px;
+  width: 20px; }
+
+.button, .button-productos {
+  background-color: #d86dd2;
+  border: none;
+  width: 100px;
+  height: 50px;
+  border-radius: 12px;
+  transition-duration: 0.5s; }
+
+.button:hover, .button-productos:hover {
+  background-color: #ad059f;
+  color: #ffffff; }
+
+.button-productos {
+  background-color: white;
+  border: black; }
+
+.productos, .prodDestacados {
+  height: 8px;
+  width: 8px;
+  margin: 24px;
+  border: solid 2px #000; }
+
+.prodDestacados {
+  border: gold; }

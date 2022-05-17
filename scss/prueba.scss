@@ -187,23 +187,6 @@ input{
     margin: 20px;
 }
 
-.button{
-    background-color: #d86dd2;
-    border: none;
-    width: 100px;
-    height: 50px;
-    border-radius: 12px;
-    transition-duration: 0.5s;
-    
-}
-
-.button{
-    &:hover {
-        background-color: #ad059f;
-        color: #ffffff;
-    }
-    
-}
 
 
 /* Seccion Grid Inicio */
@@ -304,4 +287,62 @@ grid-area: tres;
     
     }
 
+}
+
+//Maps
+
+$productos: (
+    uno: blue,
+    dos: red,
+    tres: green,
+
+);
+
+@each $producto, $color in $productos {
+    .producto-#{$producto} {
+        color: $color;
+        height: 20px;
+        width: 20px;
+    }
+
+}
+
+
+//Extend
+.button{
+    background-color: #d86dd2;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 12px;
+    transition-duration: 0.5s;
+}
+.button{
+    &:hover {
+        background-color: #ad059f;
+        color: #ffffff;
+    }
+}
+.button-productos{
+    @extend .button;
+    background-color: white;
+    border: black;
+}
+
+//Mixins + mezcla ultimas prop de SASS
+
+@mixin size{
+    height: 8px;
+    width: 8px;
+    margin: 24px;
+    border: solid 2px #000;
+}
+
+.productos{
+    @include size;
+}
+
+.prodDestacados{
+    @extend .productos;
+    border: gold;
 }
